@@ -13,10 +13,6 @@ router.get('/', product_controller_1.ProductController.getAllProduct);
 router.get('/random', product_controller_1.ProductController.getRandom);
 router.get('/:id', product_controller_1.ProductController.getSingleProduct);
 router.post('/', (0, validateRequest_1.default)(product_validation_1.ProductZodValidation.productZodSchema), product_controller_1.ProductController.createProduct);
-// router.patch(
-//   '/:id',
-//   validateRequest(ProductZodValidation.productZodSchema),
-//   ProductController.updateProduct
-// );
+router.patch('/:id', (0, validateRequest_1.default)(product_validation_1.ProductZodValidation.productUpdateZodSchema), product_controller_1.ProductController.updateProduct);
 router.delete('/:id', product_controller_1.ProductController.deleteProduct);
 exports.ProductRoutes = router;

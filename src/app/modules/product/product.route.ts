@@ -14,11 +14,11 @@ router.post(
   ProductController.createProduct
 );
 
-// router.patch(
-//   '/:id',
-//   validateRequest(ProductZodValidation.productZodSchema),
-//   ProductController.updateProduct
-// );
+router.patch(
+  '/:id',
+  validateRequest(ProductZodValidation.productUpdateZodSchema),
+  ProductController.updateProduct
+);
 router.delete('/:id', ProductController.deleteProduct);
 
 export const ProductRoutes = router;

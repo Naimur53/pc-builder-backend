@@ -52,5 +52,24 @@ const productSchema = new mongoose_1.Schema({
         type: Number,
         required: true,
     },
+    reviews: {
+        type: [
+            {
+                userImg: {
+                    type: String,
+                    required: true,
+                },
+                userName: {
+                    type: String,
+                    required: true,
+                },
+                description: {
+                    type: String,
+                    required: true,
+                },
+            },
+        ],
+        default: [], // Set default value to an empty array
+    },
 });
 exports.Product = (0, mongoose_1.model)('Product', productSchema);

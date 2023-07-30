@@ -24,7 +24,7 @@ let server;
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            console.log(`🛢   Database is connecting...`);
+            console.log(`🛢   Database is connecting...  `);
             yield mongoose_1.default.connect(index_1.default.database_url);
             console.log(`🛢   Database is connected successfully`);
             server = app_1.default.listen(index_1.default.port, () => {

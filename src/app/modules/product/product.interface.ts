@@ -7,7 +7,11 @@ export type ProductCategory =
   | 'Storage Device'
   | 'Monitor'
   | 'Others';
-
+type Review = {
+  userImg: string;
+  userName: string;
+  description: string;
+};
 export type IProduct = {
   img: string;
   productName: string;
@@ -18,6 +22,7 @@ export type IProduct = {
   keyFeatures: string;
   individualRating: number;
   averageRating: number;
+  reviews: Review[];
 };
 
 export type ProductModel = Model<IProduct, Record<string, unknown>>;

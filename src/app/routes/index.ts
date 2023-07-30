@@ -5,7 +5,7 @@ const router = express.Router();
 
 const moduleRoutes = [
   {
-    path: '/Products',
+    path: '/products',
     route: ProductRoutes,
   },
 ];
